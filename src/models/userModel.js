@@ -2,17 +2,17 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   username: {
-    type: string,
+    type: String,
     repuired: [true, "Username is required"],
     unique: [true, "Username already exists"],
   },
   email: {
-    type: string,
+    type: String,
     required: [true, "Email is required"],
     unique: [true, "Email already exists"],
   },
   password: {
-    type: string,
+    type: String,
     required: [true, "Password is required"],
   },
   isVerified: {
